@@ -1,4 +1,7 @@
-namespace Recycling.Data
+using RecyclingSENEXAM.Presentation;
+using RecyclingSENEXAM.Logic;
+
+namespace RecyclingSENEXAM.Data
 {
     internal class RecycledItemsData
     {
@@ -112,3 +115,4 @@ namespace Recycling.Data
         }
     }
 }
+
