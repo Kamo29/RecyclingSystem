@@ -1,9 +1,3 @@
-/* =====================================================
-   Project: Recycling Management System
-   Author: Kamo Phiri
-   Description: SQL Server schema for RecyclingSystem
-   Created: 2025-10-26
-   ===================================================== */
 
 CREATE DATABASE RecyclingManagement;
 GO
