@@ -39,6 +39,23 @@ CREATE TABLE RecyclableItems (
 );
 GO
 
+CREATE TABLE InventoryActions (
+    ActionID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID INT NOT NULL,
+    ItemID INT NOT NULL,
+    ActionType NVARCHAR(50) CHECK (ActionType IN ('Create', 'Update', 'Delete')),
+    ActionDate DATETIME DEFAULT GETDATE(),
+
+    CONSTRAINT FK_InventoryActions_Users FOREIGN KEY (UserID)
+        REFERENCES Users(UserID)
+        ON DELETE CASCADE,
+
+    CONSTRAINT FK_InventoryActions_RecyclableItems FOREIGN KEY (ItemID)
+        REFERENCES RecyclableItems(ItemID)
+        ON DELETE CASCADE
+);
+GO
+
 -- =========================
 -- TABLE: InventoryActions
 -- =========================
